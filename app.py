@@ -52,7 +52,7 @@ def upload_file():
  
         # Кластеризация
         if settings["method"] == "kmeans":
-            kmeans = KMeans(n_clusters=settings["n_clusters"], random_state=0)
+            kmeans = KMeans(n_clusters=settings["n_clusters"], random_state=0, n_init=10)
             data["cluster"] = kmeans.fit_predict(data_scaled)
         elif settings["method"] == "dbscan":
             dbscan = DBSCAN(eps=settings["eps"], min_samples=settings["min_samples"])
