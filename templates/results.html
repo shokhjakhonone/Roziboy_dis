@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Результаты кластеризации</title>
+    <link rel="stylesheet" href="./static/style.css">
+  </head>
+  <body>
+    <h1>Результаты кластеризации студентов</h1>
+    {{ tables | safe }}
+    <div class="chart-container">
+      <img src="/static/cluster_chart.png" alt="График кластеризации" width="100%">
+    </div>
+  </body>
+</html>

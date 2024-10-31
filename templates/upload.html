@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Загрузить данные студентов</title>
+    <link rel="stylesheet" href="./static/style.css">
+  </head>
+  <body>
+    <h1>Загрузите файл с данными о студентах</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+      <label for="file">Выберите файл CSV:</label>
+      <input type="file" name="file" required><br><br>
+
+      <label for="method">Метод кластеризации:</label>
+      <select name="method" id="method" onchange="toggleParams()">
+        <option value="kmeans">K-means</option>
+        <option value="dbscan">DBSCAN</option>
+      </select><br><br>
+
+      <div id="kmeans_params">
+        <label for="n_clusters">Число кластеров (K-means):</label>
+        <input type="number" name="n_clusters" min="1" value="3"><br><br>
+      </div>
+
+      <div id="dbscan_params" style="display: none;">
+        <label for="eps">Параметр EPS (DBSCAN):</label>
+        <input type="number" name="eps" step="0.1" value="0.5"><br><br>
+        <label for="min_samples">Минимальное количество выборок (DBSCAN):</label>
+        <input type="number" name="min_samples" min="1" value="5"><br><br>
+      </div>
+
+      <input type="submit" value="Анализировать">
+    </form>
+
+    <script>
+      function toggleParams() {
+        const method = document.getElementById("method").value;
+        document.getElementById("kmeans_params").style.display = method === "kmeans" ? "block" : "none";
+        document.getElementById("dbscan_params").style.display = method === "dbscan" ? "block" : "none";
+      }
+    </script>
+  </body>
+</html>

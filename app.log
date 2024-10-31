@@ -1,0 +1,12 @@
+2024-10-31 15:35:17,028 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-10-31 15:35:17,029 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-31 15:35:17,101 - INFO -  * Restarting with watchdog (inotify)
+2024-10-31 15:35:21,185 - WARNING -  * Debugger is active!
+2024-10-31 15:35:21,209 - INFO -  * Debugger PIN: 110-159-070
+2024-10-31 15:48:51,243 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:11
+2024-10-31 15:48:51,244 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-31 15:48:51,259 - INFO -  * Restarting with watchdog (inotify)
+2024-10-31 15:48:54,710 - WARNING -  * Debugger is active!
+2024-10-31 15:48:54,724 - INFO -  * Debugger PIN: 110-159-070
